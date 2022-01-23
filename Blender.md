@@ -27,9 +27,28 @@ Import fspy into Blender.
 If two-way symmetrical, then you can just delete half the model and mirror over the required axis. If it's 4-way symmetrical you might need to move the model origin point by setting the 3D cursor to where you want the origin (e.g. via selecting a vertex), then in object mode go to Object > Set Origin > Origin to 3D Cursor.
 
 ### Cutting curves into faces
-Draw a bezier (etc) curve exactly where you want it. It will be a curve object. Convert it to a mesh. 
+Draw a bezier (etc) curve exactly where you want it. It will be a curve object. Reduce number of vertices if needed. Convert it to a mesh. 
 
 In edit mode, select the object you want to cut the curve into. Control click the curve (so it selects it second), then Mesh > Knife Project.
+
+## General Tips
+### Move 3D cursor to vertex
+Go to edit mode > select the vertex > Shift + s > Cursor to Active
+
+### Set object origin
+Move the 3D cursor where needed > object mode > mesh > object > set transform > origin to 3D cursor
+
+### Simplify
+Can do this from Mesh > Cleanup
+
+### Flipping an object
+'s' to scale, then set 1 / -1 as appropriate on each axis. Make sure object origin is set appropriately.
+
+### Curve resolution / number of vertices
+Select curve > object mode > Object Data Properties in right pane (for curves this has a curve icon) > Active spline > Resolution U
+
+### UV unwrap see selected faces in original model
+There's a sync toggle, which is a button with diagonal arrows in each direction
 
 ## One-Time Blender Terrain / Map Setup
 These are historical notes for reference.
